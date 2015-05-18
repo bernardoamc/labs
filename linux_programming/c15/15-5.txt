@@ -1,0 +1,6 @@
+With some gambeta like:
+
+  umask(u = umask(0));
+
+This sets the umask to zero and returns the old one to the u variable, after
+that it sets the umask to u, which was the original value.

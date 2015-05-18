@@ -1,0 +1,14 @@
+a)
+real=2000 effective=2000 saved=2000 file-system=2000
+
+b)
+real=1000 effective=2000 saved=2000 file-system=2000
+
+c)
+real=1000 effective=2000 saved=0 file-system=2000
+
+d)
+real=1000 effective=0 saved=0 file-system=2000
+
+e)
+real=1000 effective=2000 saved=3000 file-system=2000

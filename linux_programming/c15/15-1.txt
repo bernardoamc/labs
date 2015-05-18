@@ -1,0 +1,25 @@
+a) This happens because the permissions are verified in the following order:
+   owner, group and other. So, if you don't have the necessary owner permissions
+   as an owner, that's it, the group permissions will not be verified.
+
+b) Write + Execute permissions permit file creating on directiories
+   Read permissions allow file listing
+   Execute permit file search ands file access (by name only).
+
+c) CREATE A NEW FILE:       execute + write permissions in directory
+   OPEN A FILE FOR READING: execute on directory and read on file
+   OPEN A FILE FOR WRITING: execute on directory and write on file
+   DELETE A FILE:           write on directory only
+
+   RENAME A FILE:
+    - to the same directory:
+        execute and write on directory only
+
+    - to a different directory:
+        execute and write on directory and read on file
+
+    - if the target already exists:
+        you need to have the permissions above to the target directory and file also
+
+    - if the sticky flag is on:
+        only the owner of the file or directory can rename it, or the super-user

@@ -1,0 +1,5 @@
+When to use spawn_link?
+- When you want dependency, if one process fails you want the parent to also fail.
+
+When to use spawn_monitor?
+- When you want to monitor and do something if a process ends or fails, but you don't want your parent process to end.

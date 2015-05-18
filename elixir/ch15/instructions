@@ -1,0 +1,30 @@
+To create a full node name in IEX we do:
+iex --name <my_name>
+
+To create a partial node name we do:
+iex --sname <partial_name>
+
+The command above will create something like:  :"partial_name@machine_name"
+
+To see the name of the current node we do: Node.self
+
+To see the list os reachable nodes we do: Node.list
+To add a node to the list we do: Node.connect :"name_of_the_node"
+* Note that the name is an atom.
+
+To spawn a process in another node we do:
+Node.spawn(:"node_name", function)
+
+To run a command in another node, both nodes must have the same COOKIE.
+Node.get_cookie
+
+To set the cookie name:
+iex --sname "seal" --cookie "my-super-cool-cookie-string"
+
+* But why does it succeed when we don’t specify a cookie?
+When Erlang starts, it looks for an .erlang.cookie file in your home directory.
+If that file doesn’t exist, Erlang creates it and stores a random string in it.
+It uses that string as the cookie for any node the user starts. That way, all
+nodes you start on a partic- ular machine are automatically given access to each
+other. Be careful when connecting nodes over a public network—the cookie is
+transmitted in plain text.

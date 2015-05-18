@@ -1,0 +1,5 @@
+No, if a call to stat() changed the timestamps it would make no sense
+to check the timestamps via the stat() itself.
+
+To verify: stat() system call uses the O_NOATIME flag so the st_atime
+           is not updated when to file is opened.

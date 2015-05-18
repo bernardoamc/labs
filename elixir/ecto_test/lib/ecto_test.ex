@@ -1,0 +1,2 @@
+defmodule EctoTest do
+end

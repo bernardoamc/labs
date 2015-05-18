@@ -1,0 +1,48 @@
+// FROM RUBY TO C
+
+  // VALUE is something passed from Ruby to C and vice-versa. When you receive a
+  // value from Ruby you need to convert it by checking its type.
+
+  // Macro showing the data type of VALUE
+  TYPE(VALUE value)
+
+  // Function raising an exception of the VALUE does not have the type specified
+  Check_Type(VALUE value, int type)
+
+  T_STRING => RArray *  RSTRING(object)  // Function to receive a pointer of type string
+  T_ARRAY  => RString * RARRAY(object)  // Function to receive a pointer of type array
+
+  rb_string_set_len(VALUE str, long len)
+  rb_ary_entry(VALUE ary, long offset)
+
+
+// FROM C TO RUBY
+  1- Cast to a Value
+  2- Use functions
+  3- Wrap data
+
+
+Encapsulate C data into a Ruby object
+
+VALUE context;
+context = Data_Wrap_Struct(rb_cObject, NULL, sasl_conn_free, conn);
+rb_iv_set(self, "@context", context);
+
+
+Creating an extension:
+
+1) extconf.rb  => Inspect environment and generate C Makefile
+2) rake compile task
+3) gemspec (specify that the gem has an ext)
+4) The C code
+
+extconf.r  ex:
+
+require 'mkmf'
+find_header('sasl/sasl.h')
+
+if have_library('sasl2', 'sasl_version')
+  create_makefile('csasl/csasl')
+else
+  abort 'libsasl is required in the system to install'
+end

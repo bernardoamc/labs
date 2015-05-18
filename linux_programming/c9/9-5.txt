@@ -1,0 +1,8 @@
+We could do this using the following sequence:
+
+  seteuid(getuid());
+  seteuid(0);
+
+To suspend the privileges:
+
+  setuid(getuid());

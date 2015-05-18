@@ -1,0 +1,3 @@
+"mbuf" is a static variable, this means that it will be placed in the "unitialized data segment".
+In this case the executable just needs to know the location and size required for this segment.
+The space required by this segment will be allocated at run time.

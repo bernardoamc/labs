@@ -1,0 +1,11 @@
+- fflush(p);
+
+The command above will flush the buffer at the user memory level, this mean
+that everything stored in this buffer will be flushed to the buffer at the
+kernel level via "write".
+
+- fsync(fileno(fp));
+
+The command force the file to sync its state to "synchronized I/O file integrity".
+This means the above will flush to disk all the buffered data and metadata
+associated with this file descriptor.

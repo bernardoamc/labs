@@ -1,0 +1,8 @@
+1- fd1 is a file descriptor for the "file" variable
+2- fd2 points to the same entry in the "Open file table" (same offset and open flags)
+3- fd3 points to the same entry in the "I-node table" (different offset and open flags, same file type, file locks, file size, etc..)
+4- "file" content is "Hello,"
+5- "file" content is "Hello,world"
+6- fd1 and fd2 offsets now are zero
+7- "file" content is "HELLO,world"
+8- "file" content is "Giddayworld"

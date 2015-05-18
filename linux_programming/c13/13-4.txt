@@ -1,0 +1,23 @@
+Output if standard output is redirected to a terminal:
+
+  If I had more time,
+  I would have written you a shorter letter.
+
+Output if standard output is redirected to a disk file:
+
+  I would have written you a shorter letter.
+  If I had more time,
+
+Why this happens?
+
+write(2) calls are not buffered at the user level, so the answer lies within
+the printf() call. If the output is redirected to a terminal a newline will
+automatically flush the buffer. This will not happen if the output is redirected
+to a file, so the printf() call gets buffered and will be flushed in the
+following situations:
+
+  - manually (calling fflush)
+  - If the buffer is full
+  - If we the process is terminated
+
+So the call to write(2) will get to the kernel buffers first.

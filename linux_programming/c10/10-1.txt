@@ -1,0 +1,12 @@
+Facts:
+  - 2^32 = 4294967296 that's the limit since clock_t is an unsigned int.
+  - sysconf(_SC_CLK_TCK) = 100 (clock ticks per second)
+  - CLOCKS_PER_SEC is 1 million as specified by POSIX
+
+times():
+  Measured in clock_ticks, so we should divide by this values to arrive at
+  the number of seconds, so it will take 4294967296 / 100 = 42949672 seconds.
+
+clock():
+  Measured in CLOCKS_PER_SEC, so we should divide by this value to arrive at the
+  number of seconds. So it will take 4294967296 / CLOCKS_PER_SEC = 4294 seconds.

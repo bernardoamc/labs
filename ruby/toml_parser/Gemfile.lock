@@ -1,0 +1,10 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    citrus (3.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  citrus

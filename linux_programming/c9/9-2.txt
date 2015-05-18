@@ -1,0 +1,4 @@
+Initially it is not privileged since the process will not use the real user id,
+but if we use something like the seteuid system call it can become privileged.
+According to the seteuid specificsation an unprivileged process can change an
+effective ID only to the same value as the corresponding real or saved set ID.

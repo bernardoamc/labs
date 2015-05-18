@@ -1,0 +1,6 @@
+The accuracy of nanosleep() is limited by the software clock, so if we don't
+specify an interval that is multiple of the software clock the interval is
+rounded up. If our program receive lot's of signals, each restart of nanosleep
+can bring rounding into the game, so each interval will sleep longer than it
+really should, thus causing the program to run longer than specified. We can
+avoid this using clock_nanosleep() call with the flag TIMER_ABSTIME.
