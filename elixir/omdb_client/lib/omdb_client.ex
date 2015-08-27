@@ -1,0 +1,2 @@
+defmodule OmdbClient do
+end
