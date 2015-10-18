@@ -6,33 +6,34 @@ defmodule Todo.Database do
   end
 
   def init(db_folder) do
-    File.mkdir_p(db_folder)
-    {:ok, db_folder}
+    {:ok, start_workers(db_folder)}
+  end
+
+  defp start_workers(db_folder) do
+    Enum.reduce(0..2, HashDict.new, fn(key, dict) ->
+      {:ok, worker_pid} = Todo.DatabaseWorker.start(db_folder)
+      HashDict.put(dict, key, worker_pid)
+    end)
   end
 
   def store(key, data) do
-    GenServer.cast(:database_server, {:store, key, data})
+    key
+    |> get_worker
+    |> GenServer.cast({:store, key, data})
   end
 
   def get(key) do
-    GenServer.call(:database_server, {:get, key})
+    key
+    |> get_worker
+    |> GenServer.call({:get, key})
   end
 
-  def handle_cast({:store, key, data}, db_folder) do
-    file_name(db_folder, key)
-    |> File.write!(:erlang.term_to_binary(data))
-
-    {:noreply, db_folder}
+  def get_worker(key) do
+    worker_key = :erlang.phash2(key, 3)
+    GenServer.call(:database_server, {:get_worker, worker_key})
   end
 
-  def handle_call({:get, key}, _, db_folder) do
-    data = case File.read(file_name(db_folder, key)) do
-      {:ok, contents} -> :erlang.binary_to_term(contents)
-      _ -> nil
-    end
-
-    {:reply, data, db_folder}
+  def handle_call({:get_worker, key}, _, workers) do
+    {:reply, HashDict.get(workers, key), workers}
   end
-
-  defp file_name(db_folder, key), do: "#{db_folder}/#{key}"
 end
