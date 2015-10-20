@@ -5,10 +5,14 @@ USAGE
 
 ## Example
 
-{:ok, cache} = Todo.Cache.start
+{:ok, cache} = Todo.Supervisor.start_link
 
-bobs_list = Todo.Cache.server_process(cache, "bobs_list")
+bobs_list = Todo.Cache.server_process("bobs_list")
 
 Todo.Server.add_entry(bobs_list, %{date: {2013, 12, 19}, title: "Dentist"})
 
 Todo.Server.entries(bobs_list, {2013, 12, 19})
+
+## Killing the Todo.Cache server
+
+Process.whereis(:todo_cache) |> Process.exit(:kill)
