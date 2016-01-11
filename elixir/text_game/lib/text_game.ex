@@ -19,72 +19,56 @@ defmodule TextGame do
 
   def generate({name, config} = game) do
     rooms_ast = generate_rooms(config[:rooms])
-    start_ast = generate_start(name, config)
 
     quote do
       unquote(rooms_ast)
-      unquote(start_ast)
-    end
-  end
 
-  def generate_start(name, config) do
-    game_presentation_ast = game_presentation(name, config[:description])
-
-    quote do
       def start() do
-        unquote(game_presentation_ast)
+        TextGame.game_presentation(unquote(name), unquote(config[:description]))
         apply(__MODULE__, unquote(config[:start]), [])
       end
     end
   end
 
   def game_presentation(name, description) do
-    quote do
-      IO.puts "\n" <> String.duplicate("#", 80)
-      IO.puts unquote(name)
-      IO.puts unquote(description)
-      IO.puts String.duplicate("#", 80) <> "\n"
-    end
+    IO.puts "\n" <> String.duplicate("#", 80)
+    IO.puts name
+    IO.puts description
+    IO.puts String.duplicate("#", 80) <> "\n"
   end
 
   def generate_room(name, config) do
-    room_actions_ast = room_actions(config)
     room_description = "\n" <> config[:description]
 
     quote do
       def unquote(name)() do
         IO.puts unquote(room_description)
-        unquote(room_actions_ast)
+        TextGame.room_presentation(unquote(name), unquote(config), __MODULE__)
       end
     end
   end
 
-  def room_actions(config) do
+  def room_presentation(name, config, module) do
     possible_actions =
       config
       |> Keyword.get(:actions)
       |> Keyword.keys
 
-    fetch_player_option_ast =
+    player_action =
       possible_actions
-      |> humanize_room_actions
-      |> fetch_player_action
+      |> TextGame.humanize_room_actions
+      |> TextGame.fetch_player_action
 
-    quote bind_quoted: [possible_actions: possible_actions, fetch_player_option_ast: fetch_player_option_ast, config: config] do
-      player_action = fetch_player_option_ast
+    if Enum.member?(possible_actions, player_action) do
+      go_to =
+        config
+        |> Keyword.get(:actions)
+        |> Keyword.get(player_action)
 
-      if Enum.member?(possible_actions, player_action) do
-        go_to =
-          config
-          |> Keyword.get(:actions)
-          |> Keyword.get(player_action)
-
-        apply(__MODULE__, go_to, [])
-      else
-        IO.puts "\nInvalid option!"
-        {current_room, _} = __ENV__.function
-        apply(__MODULE__, current_room, [])
-      end
+      apply(module, go_to, [])
+    else
+      IO.puts "\nInvalid option!"
+      apply(module, name, [])
     end
   end
 
@@ -96,16 +80,13 @@ defmodule TextGame do
   end
 
   def fetch_player_action(possible_actions) do
-    quote do
-      IO.write "Actions: "
-      IO.puts unquote(possible_actions)
+    IO.puts "Actions: #{possible_actions}"
 
-       "-> "
-      |> IO.gets
-      |> String.rstrip(?\n)
-      |> String.downcase
-      |> String.to_atom
-    end
+    "-> "
+    |> IO.gets
+    |> String.strip
+    |> String.downcase
+    |> String.to_atom
   end
 
   def generate_rooms(rooms) do
