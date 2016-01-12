@@ -18,7 +18,7 @@ defmodule TextGame do
   end
 
   def generate({name, config} = game) do
-    rooms_ast = generate_rooms(config[:rooms])
+    rooms_ast = rooms(config[:rooms])
 
     quote do
       unquote(rooms_ast)
@@ -37,39 +37,50 @@ defmodule TextGame do
     IO.puts String.duplicate("#", 80) <> "\n"
   end
 
-  def generate_room(name, config) do
+  def rooms(rooms_config) do
+    for {name, config} <- rooms_config do
+      room(name, config)
+    end
+  end
+
+  def room(name, config) do
     room_description = "\n" <> config[:description]
 
     quote do
       def unquote(name)() do
         IO.puts unquote(room_description)
-        TextGame.room_presentation(unquote(name), unquote(config), __MODULE__)
+        TextGame.render_room(unquote(name), unquote(config), __MODULE__)
       end
     end
   end
 
-  def room_presentation(name, config, module) do
-    possible_actions =
-      config
+  def render_room(name, config, module) do
+    possible_actions = possible_actions(config)
+    player_action = player_action(possible_actions)
+
+    unless Enum.member?(possible_actions, player_action) do
+      IO.puts "\nInvalid option!"
+    end
+
+    apply(module, player_movement(config, player_action, name), [])
+  end
+
+  def possible_actions(room_config) do
+    room_config
       |> Keyword.get(:actions)
       |> Keyword.keys
+  end
 
-    player_action =
-      possible_actions
+  def player_action(possible_actions) do
+    possible_actions
       |> TextGame.humanize_room_actions
-      |> TextGame.fetch_player_action
+      |> TextGame.fetch_player_input
+  end
 
-    if Enum.member?(possible_actions, player_action) do
-      go_to =
-        config
-        |> Keyword.get(:actions)
-        |> Keyword.get(player_action)
-
-      apply(module, go_to, [])
-    else
-      IO.puts "\nInvalid option!"
-      apply(module, name, [])
-    end
+  def player_movement(room_config, player_action, default_action) do
+    room_config
+      |> Keyword.get(:actions)
+      |> Keyword.get(player_action, default_action)
   end
 
   def humanize_room_actions(actions) do
@@ -79,7 +90,7 @@ defmodule TextGame do
     |> Enum.join(" / ")
   end
 
-  def fetch_player_action(possible_actions) do
+  def fetch_player_input(possible_actions) do
     IO.puts "Actions: #{possible_actions}"
 
     "-> "
@@ -87,11 +98,5 @@ defmodule TextGame do
     |> String.strip
     |> String.downcase
     |> String.to_atom
-  end
-
-  def generate_rooms(rooms) do
-    for {name, config} <- rooms do
-      generate_room(name, config)
-    end
   end
 end
