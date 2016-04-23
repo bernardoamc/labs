@@ -19,6 +19,20 @@ class Door
   end
 end
 
+class CompositeCommand
+  def initialize
+    @commands = []
+  end
+
+  def add_command(command)
+    @commands << command
+  end
+
+  def execute
+    @commands.each { |command| command.execute }
+  end
+end
+
 class Greet
   def execute
     puts "Hi!"
@@ -31,5 +45,8 @@ class Yell
   end
 end
 
-Door.new(Greet.new).open
-Door.new(Yell.new).open
+commands = CompositeCommand.new
+commands.add_command(Greet.new)
+commands.add_command(Yell.new)
+
+Door.new(commands).open
