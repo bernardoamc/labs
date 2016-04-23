@@ -4,7 +4,8 @@
 #
 # The difference between the Adapter pattern and this one is that the Adapter
 # pattern changes the interface of the real object, while the Proxy pattern
-# don't change the real object interface, it just increment functionality.
+# don't change the real object interface, it just increment functionality with
+# the objective of controlling the real object.
 #
 # Let's see an example:
 
