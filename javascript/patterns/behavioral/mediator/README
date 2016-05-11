@@ -1,0 +1,8 @@
+Mediator Pattern
+
+Controls communication between objects so neither object has to be coupled
+with others.
+
+- Allows for a loosely coupled system.
+- One object manage all communication.
+- Many to many relationship.
