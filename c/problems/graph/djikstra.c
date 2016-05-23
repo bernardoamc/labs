@@ -1,20 +1,34 @@
 /*
- * Djikstra is used to find the shortest path between a vertice and
- * all the other vertices on the graph. To solve this problem it is
- * a good idea to use a min heap, an array for visited vertices and
- * probably an array to store the costs to get to each vertice.
+ *  Djikstra is used to find the shortest path between a vertice and
+ *  all the other vertices on the graph. To solve this problem it is
+ *  a good idea to use a min heap, an array for visited vertices and
+ *  probably an array to store the costs to get to each vertice.
  *
- * To store the graph we have (that I know) two strategies:
+ *  How it works: https://www.youtube.com/watch?v=8Ls1RqHCOPw
  *
- * 1- A matrix, that is simply represented as a two dimensional
- * array (matrix[nodes][nodes]).
+ *  To store the graph we have (that I know) two strategies:
  *
- * 2- An adjacency list, that is represented as an array of linked
- * lists. It's something like: AdjacencyList *head, this *head will
- * be initialized with the same size as nodes in our graph and each
- * position is just a pointer to the start of a linked list
- * representing the edges of each node.
+ *  1- An adjacency  matrix, that is simply represented as a
+ *  two dimensional array (matrix[nodes][nodes]).
  *
+ *  2- An adjacency list, that is represented as an array of linked
+ *  lists. It's something like: AdjacencyList *head, this *head will
+ *  be initialized with the same size as nodes in our graph and each
+ *  position is just a pointer to the start of a linked list
+ *  representing the edges of each node.
+ *
+ *  Which representation is better?
+ *
+ *  The adjacency list uses way less memory and is more efficient regarding
+ *  the search part of the algorithm, where you have to find all edges from
+ *  a vertice. With the adjacency list you already have the edges, with the
+ *  adjacency matrix you have to loop through the entire vertice row to find
+ *  the edges.
+ *
+ *  Data structures to solve the problem:
+ *  - An array to store the visited vertices.
+ *  - An array to represent the cost to reach each vertice.
+ *  - * We can use a heap to always pick the lowest vertice weight.
 */
 
 #include <stdio.h>

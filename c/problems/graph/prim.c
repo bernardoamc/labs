@@ -4,27 +4,51 @@
  *
  *  How it works: https://www.youtube.com/watch?v=cplfcGZmX7I
  *
- * The input is the following:
- * nodes edges
- * node node weight  }
- * ...               | Each line is an edge, this section has <edges> lines.
- * node node weight  }
- * starting_node
+ *  To store the graph we have (that I know) two strategies:
  *
- * The output represents the total weight of the generated graph.
+ *  1- An adjacency  matrix, that is simply represented as a
+ *  two dimensional array (matrix[nodes][nodes]).
  *
- * Example of input:
+ *  2- An adjacency list, that is represented as an array of linked
+ *  lists. It's something like: AdjacencyList *head, this *head will
+ *  be initialized with the same size as nodes in our graph and each
+ *  position is just a pointer to the start of a linked list
+ *  representing the edges of each node.
  *
- *    5 6
- *    1 2 3
- *    1 3 4
- *    4 2 6
- *    5 2 2
- *    2 3 5
- *    3 5 7
- *    1
+ *  Which representation is better?
  *
- * Output: 15
+ *  The adjacency list uses way less memory and is more efficient regarding
+ *  the search part of the algorithm, where you have to find all edges from
+ *  a vertice. With the adjacency list you already have the edges, with the
+ *  adjacency matrix you have to loop through the entire row to find the edges.
+ *
+ *  Data structures to solve the problem:
+ *  - An array to store the visited vertices.
+ *  - An array to represent each vertice parent (given the chosen path).
+ *  - An array to represent the weight to reach each vertice.
+ *  - * We can also use a heap to always pick the lowest edge weight.
+ *
+ *  The input is the following:
+ *  nodes edges
+ *  node node weight  }
+ *  ...               | Each line is an edge, this section has <edges> lines.
+ *  node node weight  }
+ *  starting_node
+ *
+ *  The output represents the total weight of the generated graph.
+ *
+ *  Example of input:
+ *
+ *     5 6
+ *     1 2 3
+ *     1 3 4
+ *     4 2 6
+ *     5 2 2
+ *     2 3 5
+ *     3 5 7
+ *     1
+ *
+ *  Output: 15
  *
 */
 
