@@ -1,8 +1,8 @@
 /*
  *  Djikstra is used to find the shortest path between a vertice and
- *  all the other vertices on the graph. To solve this problem it is
- *  a good idea to use a min heap, an array for visited vertices and
- *  probably an array to store the costs to get to each vertice.
+ *  all the other vertices on the graph.
+ *
+ *  Other algorithm related to the Shortest Route Path: Floyd Warshall
  *
  *  How it works: https://www.youtube.com/watch?v=8Ls1RqHCOPw
  *
@@ -28,7 +28,7 @@
  *  Data structures to solve the problem:
  *  - An array to store the visited vertices.
  *  - An array to represent the cost to reach each vertice.
- *  - * We can use a heap to always pick the lowest vertice weight.
+ *  - We can use a heap to always pick the lowest vertice weight.
 */
 
 #include <stdio.h>
