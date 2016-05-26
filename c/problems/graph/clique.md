@@ -7,7 +7,7 @@ where **n** is the number os vertices.
 
 A complete graph (k-n) is a graph where there are edges between all vertices of the graph. Let's see an example of a k-4 graph:
 
-![K4 Graph](/images/k4_graph.bmp)
+![K4 Graph](https://github.com/bernardoamc/labs/blob/master/c/problems/graph/images/k4_graph.bmp)
 
 ## So, what's a clique?
 
