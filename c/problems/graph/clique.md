@@ -1,6 +1,6 @@
 # Clique
 
-To know what is a **clique** is, first we need to know what is a **complete
+To know what is a **clique**, first we need to know what is a **complete
 graph** (also known as **k-n** graph, where **n** is the number of vertices).
 
 ## Complete graph
@@ -33,3 +33,19 @@ used in the result.
 Given a graph with **n** vertices and **a** edges, the **maximum clique size is**:
 
 ![Maximum clique size](https://github.com/bernardoamc/labs/blob/master/c/problems/graph/images/mc2.png)
+
+### Turan's Theorem
+
+Let **G(V,E)** be a graph with graph vertices **V** and graph edges **E** on
+**n** graph vertices without a (k+1)-clique. Then:
+
+![Turan1](https://github.com/bernardoamc/labs/blob/master/c/problems/graph/images/turan1.gif)
+
+where **t(n,k) is the edge count**.
+
+The Turán graph **T(n,k)** is defined as the unique graph without a (k+1)-clique
+having the maximum possible number of graph edges, namely
+
+![Turan2](https://github.com/bernardoamc/labs/blob/master/c/problems/graph/images/turan2.gif)
+
+where **|_x_|** denotes the floor function.
