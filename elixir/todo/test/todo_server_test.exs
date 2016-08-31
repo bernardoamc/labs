@@ -1,11 +1,21 @@
 defmodule TodoServerTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case, async: false
 
   setup do
-    {:ok, todo_server} = Todo.Server.start
-    on_exit(fn -> send(todo_server, :stop) end)
+    :meck.new(Todo.Database, [:no_link])
+    :meck.expect(Todo.Database, :get, fn(_) -> nil end)
+    :meck.expect(Todo.Database, :store, fn(_, _) -> :ok end)
+
+    {:ok, todo_server} = Todo.Server.start("test_list")
+
+    on_exit(fn ->
+      :meck.unload(Todo.Database)
+      send(todo_server, :stop)
+    end)
+
     {:ok, todo_server: todo_server}
   end
+
 
   test "add_entry", context do
     assert([] == Todo.Server.entries(context[:todo_server], {2013, 12, 19}))
