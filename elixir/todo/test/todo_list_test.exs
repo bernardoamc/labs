@@ -24,6 +24,7 @@ defmodule TodoListTest do
     assert(3 == Todo.List.size(updated_list))
     assert("Updated shopping" == shopping_entry(updated_list).title)
 
+
     not_modified_list =
       sample_todo_list
       |> Todo.List.update_entry(-1, fn(_) -> flunk("shouldn't happen") end)

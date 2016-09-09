@@ -37,6 +37,7 @@ defmodule Todo.List do
        end)
   end
 
+
   def update_entry(todo_list, %{} = new_entry) do
     update_entry(todo_list, new_entry.id, fn(_) -> new_entry end)
   end
@@ -55,6 +56,7 @@ defmodule Todo.List do
         %Todo.List{todo_list | entries: new_entries}
     end
   end
+
 
   def delete_entry(
     %Todo.List{entries: entries} = todo_list,
