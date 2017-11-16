@@ -7,8 +7,7 @@ defmodule Telnet.Supervisor do
 
   def init(server_config = [_, _]) do
     children = [
-      supervisor(Task.Supervisor, [[name: Telnet.ClientsSupervisor]]),
-      supervisor(Telnet.Server, server_config)
+      worker(Telnet.Listener, server_config),
     ]
 
     opts = [strategy: :one_for_all]
