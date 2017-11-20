@@ -7,36 +7,40 @@ defmodule Telnet.Client do
 
   def init([listen_socket]) do
     send(self(), :accept)
-    {:ok, %{listen_socket: listen_socket, server_socket: nil}}
+    {:ok, %{listen_socket: listen_socket, client_socket: nil}}
   end
 
   def handle_info(:accept, state = %{listen_socket: listen_socket}) do
-    IO.inspect "Ready to accept connections..."
-    {:ok, server_socket} = :gen_tcp.accept listen_socket
+    {:ok, client_socket} = :gen_tcp.accept listen_socket
     Supervisor.start_child(Telnet.ClientsSupervisor, [])
+    Telnet.ClientsRegistry.add(client_socket)
+    Telnet.ClientsRegistry.broadcast(client_socket, "Someone joined...\n")
 
-    {:noreply, %{state | server_socket: server_socket}}
+    {:noreply, %{state | client_socket: client_socket}}
   end
 
-  def handle_info({:tcp, client_socket, packet}, state) do
-    IO.inspect "Packet received: #{packet}"
-    :gen_tcp.send client_socket,"Command acknowledged... \n"
+  def handle_info({:tcp, client_socket, packet}, state)  do
+    {:ok, _pid} = Task.Supervisor.start_child(
+      Telnet.CommandsSupervisor,
+      fn -> Telnet.Command.parse(client_socket, packet) end
+    )
+
     {:noreply, state}
   end
 
-  def handle_info({:tcp_closed, _client_socket}, %{ server_socket: server_socket }) do
-    IO.inspect "Socket has been closed"
-    {:stop, :normal, server_socket}
+  def handle_info({:tcp_closed, client_socket}, _state) do
+    Telnet.ClientsRegistry.broadcast(client_socket, "Someone quit...\n")
+    {:stop, :normal, client_socket}
   end
 
-  def handle_info({:tcp_error, _client_socket, reason}, %{ server_socket: server_socket }) do
-    IO.inspect "connection closed due to #{reason}"
-    {:stop, :normal, server_socket}
+  def handle_info({:tcp_error, client_socket, _reason}, _state) do
+    Telnet.ClientsRegistry.broadcast(client_socket, "Someone quit...\n")
+    {:stop, :normal, client_socket}
   end
 
-  def terminate(_reason, server_socket) do
-    IO.inspect "Terminating GenServer"
-    :gen_tcp.close(server_socket)
+  def terminate(_reason, client_socket) do
+    Telnet.ClientsRegistry.remove(client_socket)
+    :gen_tcp.close(client_socket)
     :ok
   end
 end

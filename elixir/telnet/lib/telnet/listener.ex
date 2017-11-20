@@ -10,12 +10,11 @@ defmodule Telnet.Listener do
     tcp_config = [:binary, packet: :line, active: true, ip: ip]
     {:ok, listen_socket} = :gen_tcp.listen(port, tcp_config)
 
-    IO.inspect "Started listening..."
-    send(self(), :start_client_supervisor)
-    {:ok, %{listen_socket: listen_socket, clients_sup: nil}}
+    send(self(), :start_clients_supervisor)
+    {:ok, %{listen_socket: listen_socket, clients_sup: nil, commands_sup: nil}}
   end
 
-  def handle_info(:start_client_supervisor, state = %{listen_socket: listen_socket}) do
+  def handle_info(:start_clients_supervisor, state = %{listen_socket: listen_socket}) do
     {:ok, clients_sup} = Supervisor.start_child(Telnet.Supervisor, clients_supervisor_spec(listen_socket))
     {:ok, _client} = Supervisor.start_child(Telnet.ClientsSupervisor, [])
 

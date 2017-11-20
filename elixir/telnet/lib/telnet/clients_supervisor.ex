@@ -6,8 +6,6 @@ defmodule Telnet.ClientsSupervisor do
   end
 
   def init([listen_socket]) do
-    IO.inspect "Clients Supervisor ready..."
-
     opts = [
       strategy: :simple_one_for_one,
       max_restarts: 5,
