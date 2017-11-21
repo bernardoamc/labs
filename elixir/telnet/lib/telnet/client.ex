@@ -13,6 +13,7 @@ defmodule Telnet.Client do
   def handle_info(:accept, state = %{listen_socket: listen_socket}) do
     {:ok, client_socket} = :gen_tcp.accept listen_socket
     Supervisor.start_child(Telnet.ClientsSupervisor, [])
+
     Telnet.ClientsRegistry.add(client_socket)
     Telnet.ClientsRegistry.broadcast(client_socket, "Someone joined...\n")
 
