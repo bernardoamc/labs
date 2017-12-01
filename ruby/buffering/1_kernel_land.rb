@@ -6,6 +6,7 @@ def normal
     f.write "#{i}-"
   end
 
+  f.write "\n"
   f.close
 end
 
@@ -20,18 +21,7 @@ def with_syswrite
   f.close
 end
 
-def with_sync
-  # https://github.com/ruby/ruby/blob/defcaf89dd9ed860f8ac00508ff80bcde86645a1/file.c#L6419
-  f = File.open("1_kernel_land.txt", "w", File::SYNC)
-
-  10.times do |i|
-    sleep 1
-    f.syswrite "#{i}-"
-  end
-
-  f.close
-end
-
-#normal
+puts "Normal write"
+normal
+puts "With syswrite"
 with_syswrite
-#with_sync
