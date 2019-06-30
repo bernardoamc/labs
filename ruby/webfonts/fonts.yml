@@ -1,0 +1,1845 @@
+---
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Alegreya
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Alegreya SC
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Alegreya Sans
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Alegreya Sans SC
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Almendra
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Amaranth
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- family: Amiri
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Anonymous Pro
+  category: monospace
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Archivo Narrow
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: Arimo
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: Arsenal
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Arvo
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Asap
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Averia Libre
+  category: display
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Averia Sans Libre
+  category: display
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Averia Serif Libre
+  category: display
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Bitter
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Cabin
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Cambay
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: Cantarell
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Cardo
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- family: Caudex
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Chivo
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Cormorant
+  category: serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Cormorant Garamond
+  category: serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Cormorant Infant
+  category: serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- family: Cousine
+  category: monospace
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- family: Crimson Text
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: Cuprum
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Droid Serif
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- family: Economica
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Exo
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Exo 2
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Expletus Sans
+  category: display
+  variants:
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Fira Sans
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Fira Sans Condensed
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Fira Sans Extra Condensed
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: GFS Neohellenic
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- family: Gentium Basic
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Gentium Book Basic
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Gudea
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Istok Web
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Josefin Sans
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Josefin Slab
+  category: serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Judson
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Kanit
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- family: Karla
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Lato
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Lekton
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- family: Libre Baskerville
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- family: Libre Franklin
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Lobster Two
+  category: display
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- family: Lora
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Marvel
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Merriweather
+  category: serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Merriweather Sans
+  category: sans-serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Muli
+  category: sans-serif
+  variants:
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Neuton
+  category: serif
+  variants:
+  - '200'
+  - '300'
+  - regular
+  - italic
+  - '700'
+  - '800'
+  source: google_fonts
+- 
+- 
+- 
+- 
+- family: Nobile
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- family: Noticia Text
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Noto Sans
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Noto Serif
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Nunito
+  category: sans-serif
+  variants:
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Nunito Sans
+  category: sans-serif
+  variants:
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- family: Old Standard TT
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- 
+- family: Open Sans
+  category: sans-serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Overlock
+  category: display
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- family: Overpass
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- family: PT Sans
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: PT Serif
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Philosopher
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Playfair Display
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Playfair Display SC
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Prompt
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- family: Proza Libre
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  source: google_fonts
+- family: Puritan
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- family: Quantico
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Quattrocento Sans
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Raleway
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Rambla
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Roboto
+  category: sans-serif
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- family: Roboto Condensed
+  category: sans-serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Roboto Mono
+  category: monospace
+  variants:
+  - '100'
+  - 100italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Rosario
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- family: Rubik
+  category: sans-serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Scada
+  category: sans-serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Share
+  category: display
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Simonetta
+  category: display
+  variants:
+  - regular
+  - italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Source Sans Pro
+  category: sans-serif
+  variants:
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- family: Space Mono
+  category: monospace
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Taviraj
+  category: serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Tinos
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Titillium Web
+  category: sans-serif
+  variants:
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '900'
+  source: google_fonts
+- 
+- family: Trirong
+  category: serif
+  variants:
+  - '100'
+  - 100italic
+  - '200'
+  - 200italic
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '600'
+  - 600italic
+  - '700'
+  - 700italic
+  - '800'
+  - 800italic
+  - '900'
+  - 900italic
+  source: google_fonts
+- 
+- family: Trochut
+  category: display
+  variants:
+  - regular
+  - italic
+  - '700'
+  source: google_fonts
+- 
+- 
+- family: Ubuntu
+  category: sans-serif
+  variants:
+  - '300'
+  - 300italic
+  - regular
+  - italic
+  - '500'
+  - 500italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- family: Ubuntu Mono
+  category: monospace
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- family: Volkhov
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- family: Vollkorn
+  category: serif
+  variants:
+  - regular
+  - italic
+  - '700'
+  - 700italic
+  source: google_fonts
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 

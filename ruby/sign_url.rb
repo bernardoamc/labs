@@ -9,6 +9,6 @@ def sign_message(message)
   OpenSSL::HMAC.hexdigest(digest, HMAC_SECRET, message)
 end
 
-host =  'shop1.myshopify.io'
+host =  'my.host.io'
 puts "Valid host: #{Base64.urlsafe_encode64(host).sub(/=+\z/, '')}"
 puts "Valid hmac: #{sign_message(host)}"

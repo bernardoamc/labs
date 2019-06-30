@@ -1,0 +1,40 @@
+varnishtest "Host authentication"
+  server s1 {
+    rxreq
+    txresp
+} -start
+varnish v1 -vcl+backend {
+  include "${pwd}/config.vcl";
+} -start
+client c1 {
+    txreq -url "/my_font.woff2?host=1234"
+    rxresp
+    expect resp.status == 406
+    expect resp.reason == "Missing or malformed 'hmac' query string parameter"
+
+    txreq -url "/my_font.woff2?hmac=1234"
+    rxresp
+    expect resp.status == 406
+    expect resp.reason == "Missing or malformed 'host' query string parameter"
+
+    txreq -url "/my_font.woff2?host=1234&hmac=1234"
+    rxresp
+    expect resp.status == 406
+    expect resp.reason == "Invalid 'hmac' query string parameter"
+
+    txreq -url "/my_font.woff2?host=MTI3LjAuMC4x&hmac=CcPmrWR3QCSHZb0R-1PKOum5ozLxtm14yl25rfZU2Cw"
+    rxresp
+    expect resp.status == 401
+    expect resp.reason == "Missing or malformed 'Referer' header"
+
+    txreq -url "/my_font.woff2?host=MTI3LjAuMC4x&hmac=CcPmrWR3QCSHZb0R-1PKOum5ozLxtm14yl25rfZU2Cw" -hdr "Referer: http://different.com"
+    rxresp
+    expect resp.status == 401
+    expect resp.reason == "Unauthorized referrer"
+
+    txreq -url "/my_font.woff2?host=MTI3LjAuMC4x&hmac=CcPmrWR3QCSHZb0R-1PKOum5ozLxtm14yl25rfZU2Cw" -hdr "Referer: http://127.0.0.1"
+    rxresp
+    expect resp.status == 200
+}
+
+client c1 -run
