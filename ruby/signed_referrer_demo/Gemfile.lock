@@ -5,7 +5,7 @@ GEM
     eventmachine (1.2.0.1)
     foreman (0.81.0)
       thor (~> 0.19.1)
-    rack (1.6.5)
+    rack (1.6.11)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.7)
