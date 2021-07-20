@@ -1,6 +1,0 @@
-[package]
-name = "test_space"
-version = "0.1.0"
-authors = ["Bernardo Chaves <bernardo.amc@gmail.com>"]
-
-[dependencies]

@@ -1,4 +1,0 @@
-EctoTest
-========
-
-** TODO: Add description **

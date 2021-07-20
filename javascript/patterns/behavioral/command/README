@@ -1,6 +1,0 @@
-The Command pattern encapsulates the calling of a method as an object.
-
-- Decouples the execution from the implementation.
-- Less fragile implementations.
-- Support undo operations.
-- Supports auditing and logging of operations.

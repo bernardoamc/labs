@@ -1,2 +1,0 @@
-defmodule Conditions do
-end

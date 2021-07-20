@@ -1,4 +1,0 @@
-OmdbClient
-==========
-
-** TODO: Add description **

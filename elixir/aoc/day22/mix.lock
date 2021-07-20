@@ -1,0 +1,3 @@
+%{
+  "priority_queue": {:hex, :priority_queue, "1.0.0", "5ff5f83a764b635e71f0e41bf78b9763bb233bbac8f5733b4b09b6730bddf866", [], [], "hexpm"},
+}
