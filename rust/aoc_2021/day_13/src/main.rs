@@ -89,9 +89,9 @@ impl Paper {
             let mut line = String::new();
             for x in 0..=width {
                 line.push(if self.dots.contains(&(x, y)) {
-                    '#'
+                    '█'
                 } else {
-                    '.'
+                    ' '
                 });
             }
             println!("{}", line);
